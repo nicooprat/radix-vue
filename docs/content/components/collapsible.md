@@ -134,7 +134,7 @@ import './styles.css'
 <template>
   <CollapsibleRoot>
     <CollapsibleTrigger>…</CollapsibleTrigger>
-    <CollapsibleContent class="CollapsibleContent">
+    <CollapsibleContent forceMount class="CollapsibleContent">
       …
     </CollapsibleContent>
   </CollapsibleRoot>
@@ -147,10 +147,10 @@ import './styles.css'
   overflow: hidden;
 }
 .CollapsibleContent[data-state="open"] {
-  animation: slideDown 300ms ease-out;
+  animation: slideDown 300ms ease-out both;
 }
 .CollapsibleContent[data-state="closed"] {
-  animation: slideUp 300ms ease-out;
+  animation: slideUp 300ms ease-out both;
 }
 
 @keyframes slideDown {
